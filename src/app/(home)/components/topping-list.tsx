@@ -14,7 +14,7 @@ const toppings = [
   {
     id: "2",
     name: "Jelapeno",
-    image: "/Jelapeno.png",
+    image: "/jelapeno.png",
     price: 50,
     isAvailable: true,
   },
