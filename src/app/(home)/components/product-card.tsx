@@ -13,6 +13,8 @@ import Image from "next/image";
 
 import React from "react";
 import ToppingList from "./topping-list";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart } from "lucide-react";
 
 const ProductCard = ({ product }: PropTypes) => {
   return (
@@ -148,6 +150,15 @@ hover: bg-accent text-accent-foreground peer-data-[state=checked]:border-primary
                 </RadioGroup>
 
                 <ToppingList />
+
+                <div className="flex items-center justify-between my-6">
+                  <span className="font-bold">₹500</span>
+
+                  <Button>
+                    <ShoppingCart size={20} />
+                    <span className="ml-2">Add to cart</span>
+                  </Button>
+                </div>
               </div>
             </div>
           </DialogContent>

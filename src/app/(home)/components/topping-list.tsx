@@ -50,7 +50,7 @@ const ToppingList = () => {
   return (
     <section className="mt-6">
       <h3>Extra toppings</h3>
-      <div className="flex items-center justify-center gap-4 mb-2">
+      <div className="flex items-center justify-center gap-4 m-0 ">
         {toppings.map((topping) => {
           return (
             <ToppingCard
