@@ -1,20 +1,10 @@
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
@@ -22,6 +12,7 @@ import { PropTypes } from "@/typings";
 import Image from "next/image";
 
 import React from "react";
+import ToppingList from "./topping-list";
 
 const ProductCard = ({ product }: PropTypes) => {
   return (
@@ -115,8 +106,7 @@ const ProductCard = ({ product }: PropTypes) => {
                     </Label>
                   </div>
                 </RadioGroup>
-              </div>
-              <div>
+
                 <h4 className="mt-6">Choose the crust</h4>
 
                 <RadioGroup
@@ -134,7 +124,7 @@ const ProductCard = ({ product }: PropTypes) => {
                     <Label
                       htmlFor="thin"
                       className="flex flex-col items-center justify-between rounded-md border-2 bg-white p-4 
-    hover: bg-accent text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+hover: bg-accent text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                     >
                       Thin
                     </Label>
@@ -150,12 +140,14 @@ const ProductCard = ({ product }: PropTypes) => {
                     <Label
                       htmlFor="thick"
                       className="flex flex-col items-center justify-between rounded-md border-2 bg-white p-4 
-    hover: bg-accent text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
+hover: bg-accent text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
                     >
                       Thick
                     </Label>
                   </div>
                 </RadioGroup>
+
+                <ToppingList />
               </div>
             </div>
           </DialogContent>

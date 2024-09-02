@@ -6,4 +6,18 @@ export type Product = {
   price: number;
 };
 
-type PropTypes = { product: Product }
+type PropTypes = { product: Product };
+
+export type Topping = {
+  id: string;
+  name: string;
+  price: number;
+  image: string;
+  isAvailable: boolean;
+};
+
+type PropType = {
+  topping: Topping;
+  selectedToppings: Topping[];
+  handleCheckBoxCheck: (topping: Topping) => void;
+};
